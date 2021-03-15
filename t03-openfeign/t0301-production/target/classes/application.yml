@@ -1,0 +1,21 @@
+server.port: 8083
+
+# 默认配置环境
+spring:
+  application:
+    name: production
+  # 文件上传限制
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  # 注册中心
+  cloud:
+    nacos:
+      discovery:
+        ephemeral: false
+        server-addr: 47.119.139.41:8848
+
+  # 默认配置
+  profiles:
+    active: test
